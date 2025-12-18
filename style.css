@@ -40,9 +40,9 @@ h3,
 
 /* Header & Nav */
 header {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #6a8d73;
     backdrop-filter: blur(16px);
-    color: var(--black);
+    color: var(--white);
     padding: 1.25rem 5%;
     display: flex;
     justify-content: space-between;
@@ -59,7 +59,7 @@ header {
     font-weight: 700;
     font-style: italic;
     letter-spacing: -0.5px;
-    color: var(--primary-green);
+    color: var(--white);
 }
 
 nav ul {
@@ -70,7 +70,7 @@ nav ul {
 }
 
 nav a {
-    color: var(--black);
+    color: var(--white);
     text-decoration: none;
     font-weight: 500;
     font-size: 0.9rem;
@@ -88,8 +88,8 @@ nav a::after {
     left: 50%;
     transform: translateX(-50%);
     width: 0;
-    height: 1px;
-    background: var(--primary-green);
+    height: 2px;
+    background: var(--white);
     transition: width 0.4s var(--transition);
 }
 

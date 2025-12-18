@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
 
 :root {
-    --primary-green: #5a7d5f;
-    --primary-green-rgb: 90, 125, 95;
+    --primary-green: #758D79;
+    /* Exact sage from design */
+    --primary-green-rgb: 117, 141, 121;
     --light-mint: #f4f9f5;
     --accent-mint: #dcece0;
     --white: #ffffff;

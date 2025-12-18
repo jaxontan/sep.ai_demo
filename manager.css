@@ -1,0 +1,181 @@
+@import 'style.css';
+
+/* Manager Specific Layout */
+.manager-container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 3rem;
+    min-height: 80vh;
+}
+
+/* Sidebar */
+.manager-sidebar {
+    background: var(--white-soft);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 2rem;
+    height: fit-content;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--glass-border);
+    position: sticky;
+    top: 100px;
+}
+
+.manager-nav-item {
+    display: block;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.3s var(--transition);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    cursor: pointer;
+}
+
+.manager-nav-item:hover,
+.manager-nav-item.active {
+    background: rgba(117, 141, 121, 0.1);
+    color: var(--primary-green);
+    font-weight: 700;
+}
+
+.manager-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--accent-mint);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.manager-header h2 {
+    color: var(--primary-green);
+    font-size: 2.5rem;
+}
+
+/* Dashboard Sections */
+.dashboard-section {
+    display: none;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.dashboard-section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Lists & Cards */
+.item-card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--header-shadow);
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    transition: all 0.3s var(--transition);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-mint);
+}
+
+.item-info h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.item-meta {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* Actions */
+.action-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-green);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: #5d7561;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--text-muted);
+    color: var(--text-muted);
+}
+
+.btn-danger {
+    background: transparent;
+    color: #e63946;
+    border: 1px solid rgba(230, 57, 70, 0.2);
+}
+
+.btn-danger:hover {
+    background: #e63946;
+    color: white;
+}
+
+.btn-success {
+    background-color: #d7e9da;
+    color: var(--primary-green);
+}
+
+/* Add Button */
+.fab {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--primary-green);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(117, 141, 121, 0.4);
+    cursor: pointer;
+    transition: transform 0.3s;
+    font-size: 2rem;
+    z-index: 100;
+}
+
+.fab:hover {
+    transform: scale(1.1) rotate(90deg);
+}

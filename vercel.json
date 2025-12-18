@@ -9,6 +9,10 @@
             "handle": "filesystem"
         },
         {
+            "src": "/manager",
+            "dest": "/api/manager.php"
+        },
+        {
             "src": "/(.*)",
             "dest": "/api/index.php"
         }
